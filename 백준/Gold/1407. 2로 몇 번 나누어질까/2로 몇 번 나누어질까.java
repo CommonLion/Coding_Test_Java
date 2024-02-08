@@ -22,7 +22,6 @@ public class Main{
         long sum=0;
         long size=0;
         long xx=x;
-        //Map<Long, Long> map = new LinkedHashMap<>();
 
         ArrayList<Long> list = new ArrayList<>();
         if(x==0) return 0;
@@ -42,19 +41,15 @@ public class Main{
             count = x/i;
             arr[z]=count;
             list.add(i);
-            //System.out.println("arr:"+arr[z]);
         }
-       // System.out.println(list);
         count = 0;
         long temp=0;
-        //Collections.reverse(list);
 
         for (int i = (int)size; i >= 0; i--) {
             temp = arr[i] - count;
             count += temp;
             sum += temp*list.get(i);
 
-            //System.out.println(arr[i]+"t"+temp+"*"+count+"+"+sum);
         }
 
         return sum;
@@ -64,13 +59,10 @@ public class Main{
         if (n == 0) return 1;
         if(n==1)return a;
         long tmp = pow(a, n/2);
-        //System.out.println(tmp);
         if(n%2==0){
             return tmp*tmp;
         }else{
             return a*tmp*tmp;
         }
     }
-
-
 }
